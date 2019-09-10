@@ -4,11 +4,12 @@
 #
 Name     : mvn-aggdesigner
 Version  : 6.0
-Release  : 1
+Release  : 2
 URL      : https://github.com/julianhyde/aggdesigner/archive/aggdesigner-6.0.tar.gz
 Source0  : https://github.com/julianhyde/aggdesigner/archive/aggdesigner-6.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/net/hydromatic/aggdesigner-algorithm/6.0/aggdesigner-algorithm-6.0.jar
 Source2  : https://repo.maven.apache.org/maven2/net/hydromatic/aggdesigner-algorithm/6.0/aggdesigner-algorithm-6.0.pom
+Source3  : https://repo.maven.apache.org/maven2/net/hydromatic/aggdesigner/6.0/aggdesigner-6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -55,6 +56,9 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/net/hydromatic/aggdesig
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/hydromatic/aggdesigner-algorithm/6.0
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/net/hydromatic/aggdesigner-algorithm/6.0/aggdesigner-algorithm-6.0.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/hydromatic/aggdesigner/6.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/net/hydromatic/aggdesigner/6.0/aggdesigner-6.0.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -63,6 +67,7 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/net/hydromatic/aggdesig
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/net/hydromatic/aggdesigner-algorithm/6.0/aggdesigner-algorithm-6.0.jar
 /usr/share/java/.m2/repository/net/hydromatic/aggdesigner-algorithm/6.0/aggdesigner-algorithm-6.0.pom
+/usr/share/java/.m2/repository/net/hydromatic/aggdesigner/6.0/aggdesigner-6.0.pom
 
 %files license
 %defattr(0644,root,root,0755)
